@@ -6,18 +6,15 @@ public class Address {
     private String street, city, county, postcode;
 
     public Address(int number,String  street,String city, String county, String postcode) {
-        super();
-        number = this.number;
-        street = this.street;
-        city = this.city;
-        county = this.county;
-        postcode = this.postcode;
+
+        this.number = number;
+        this.street = street;
+        this.city = city;
+        this.county = county;
+        this.postcode = postcode;
     }
 
-    @Override
-    public String toString() {
-        return String.format("Library.Address [number=%s, street=%s,  city=%s, county=%s,postcode=%s]", number, street, city, county,postcode);
-    }
+
 
     public int getNumber(){
         return number;
@@ -51,5 +48,10 @@ public class Address {
     }
     public void setPostcode(String postcode){
         this.postcode = postcode;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Library.Address [number=%s, street=%s,  city=%s, county=%s,postcode=%s]", number, street, city, county,postcode);
     }
 }

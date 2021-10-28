@@ -1,18 +1,20 @@
 package Library;
 
-public class Books extends Product{
+public class CD extends Product{
 
     private static int instances;
     private Publishers publisher;
     private Authors author;
+    private int tracks;
 
 
-    public Books(String title, double price, Publishers publisher, Authors author) {
+    public CD(String title, double price, Publishers publisher, Authors author, int tracks) {
         super(title, price);
         instances ++;
         this.publisher = publisher;
-        this.author = author
-        ;
+        this.author = author;
+        this.tracks = tracks;
+
     }
 
     @Override
@@ -40,7 +42,15 @@ public class Books extends Product{
         this.publisher = publisher;
     }
 
+    public int getTracks(){
+        return tracks;
+    }
+    public void setTracks(int tracks){
+        this.tracks = tracks;
+    }
+
     public static int getCount(){
         return instances;
     }
-    }
+}
+

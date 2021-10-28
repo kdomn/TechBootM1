@@ -1,32 +1,19 @@
 package Library;
 
-public class Publishers {
+public class Publishers extends Person{
+    private String organisation;
 
-    private String name;
-    private Address address;
+    public Publishers (String name, Address address, String organisation) {
+        super(name, address);
 
-    public Publishers(String name, Address address) {
-        this.name = name;
-        this.address = address;
+        this.organisation = organisation;
 
     }
     @Override
     public String toString() {
-        return String.format("Publisher [name=%s, address=%s]", name, address);
+        return String.format("publisher [name=%s, address=%s, genre=%s]", getName(), getAddress(), organisation);
     }
 
 
-    public String getName(){
-        return name;
-    }
-    public void setName(String name){
-        this.name = name;
-    }
 
-    public Address getAddress(){
-        return address;
-    }
-    public void setName(Address address){
-        this.address = address;
-    }
 }
